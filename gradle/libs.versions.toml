@@ -1,7 +1,7 @@
 [versions]
 agp = "8.5.1"
 kotlin = "1.9.0"
-coreKtx = "1.15.0"
+coreKtx = "1.12.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -10,6 +10,11 @@ activityCompose = "1.10.0"
 composeBom = "2024.04.01"
 roomCommon = "2.6.1"
 roomKtx = "2.6.1"
+transportRuntime = "4.0.0"
+
+dagger-hilt = "2.50"
+hilt-compiler = "1.0.0"
+appcompat = "1.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,8 +33,18 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
+transport-runtime = { group = "com.google.android.datatransport", name = "transport-runtime", version.ref = "transportRuntime" }
+
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.0.0" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+#hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hilt-compiler" }
+#hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-compiler" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+dagger-hilt = { id = "com.google.dagger.hilt.android", version = "2.50" }
